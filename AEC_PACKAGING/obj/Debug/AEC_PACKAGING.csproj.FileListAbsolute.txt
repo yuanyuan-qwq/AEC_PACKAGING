@@ -1,0 +1,14 @@
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\bin\Debug\AEC_PACKAGING.exe
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\bin\Debug\MySql.Data.dll
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\bin\Debug\AEC_PACKAGING.exe.config
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.csproj.AssemblyReference.cache
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.csproj.SuggestedBindingRedirects.cache
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.Login.resources
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.Properties.Resources.resources
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.csproj.GenerateResource.cache
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.csproj.CoreCompileInputs.cache
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.csproj.CopyComplete
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.exe
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.pdb
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\bin\Debug\AEC_PACKAGING.pdb
+D:\Programming\C#\AEC_PACKAGING\AEC_PACKAGING\obj\Debug\AEC_PACKAGING.Menu.resources
