@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace AEC_PACKAGING
 {
-    public partial class Form2 : Form
+    public partial class Menu : Form
     {
-        public Form2()
+        public Menu()
         {
             InitializeComponent();
         }
-
+        /*
         private void Form2_Load(object sender, EventArgs e)
         {
 
         }
+        */
+
     }
 }
