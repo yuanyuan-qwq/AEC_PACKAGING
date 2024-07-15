@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.BtnLogin = new System.Windows.Forms.Button();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,10 +69,9 @@
             this.txtPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.Location = new System.Drawing.Point(380, 424);
             this.txtPwd.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPwd.Multiline = true;
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
-            this.txtPwd.Size = new System.Drawing.Size(518, 26);
+            this.txtPwd.Size = new System.Drawing.Size(518, 30);
             this.txtPwd.TabIndex = 4;
             // 
             // label2
@@ -93,9 +93,8 @@
             this.txtUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserID.Location = new System.Drawing.Point(382, 328);
             this.txtUserID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtUserID.Multiline = true;
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(518, 26);
+            this.txtUserID.Size = new System.Drawing.Size(518, 30);
             this.txtUserID.TabIndex = 6;
             // 
             // BtnLogin
@@ -127,8 +126,6 @@
             this.Name = "Login";
             this.Padding = new System.Windows.Forms.Padding(1);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            //this.Text = "Form1";
-            //this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

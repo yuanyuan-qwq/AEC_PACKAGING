@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,54 +6,72 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+
+using System;
+using System.Windows.Forms;
+using AEC_PACKAGING.src.presenter;
+using AEC_PACKAGING.src.view.Forms;
 
 namespace AEC_PACKAGING
 {
     public partial class Login : Form
     {
-        private LoginController controller;
+        private StaffPresenter staffPresenter;
 
         public Login()
         {
             InitializeComponent();
-            this.controller = new LoginController(new UserModel(), new DatabaseConnection());
+            staffPresenter = new StaffPresenter();
         }
-        /*
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        */
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //temp
-            new Menu().Show();
-            this.Hide();
-
-            /*
-            string userID = txtUserID.Text;
+            string username = txtUserID.Text;
             string password = txtPwd.Text;
 
-            controller.SetCredentials(userID, password);
+            // Authenticate user
+            int? userRole = staffPresenter.AuthenticateUser(username, password);
 
-            if (controller.AttemptLogin())
+            if (userRole.HasValue)
             {
-                MessageBox.Show("Login Successful!");
-                new Menu().Show();
-                this.Hide();
+                // Authentication successful
+                MessageBox.Show($"Login successful! User role: {userRole}");
+
+                // Depending on the user's role, navigate to the appropriate form
+                switch (userRole)
+                {
+                    case 1:
+                        new Menu().Show();
+                        this.Hide();
+                        break;
+                    case 2:
+                        new Menu().Show();
+                        this.Hide();
+                        break;
+                    default:
+                        MessageBox.Show($"Wait a minute WHO ARE U! User role: {userRole}");
+                        break;
+                }
             }
             else
             {
-                MessageBox.Show("Incorrect UserID or Password! Try again!");
+                // Authentication failed
+                MessageBox.Show("Invalid username or password. Please try again.");
                 txtUserID.Clear();
                 txtPwd.Clear();
                 txtUserID.Focus();
             }
-            */
-
         }
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Check if the form is closing due to user action
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                // Close the entire application
+                Application.Exit();
+            }
+        }
+
     }
 }
